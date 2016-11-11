@@ -17,7 +17,7 @@ class AuthController extends Controller
             $token = JWTAuth::attempt($credentials);
 
             if (!$token) {
-                return response()->json([], 401);
+                return response()->json($credentials, 401);
             }
         } catch (JWTException $e) {
             return response()->json([], 500);

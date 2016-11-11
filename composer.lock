@@ -4,9 +4,62 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e708c78fe091fbdadd90bb6e0ff1387e",
-    "content-hash": "0f26e782cbf288ffa2e3768eb8b7e19b",
+    "hash": "c85f4e983c80175b5ac1a29146f3769b",
+    "content-hash": "a6f444780d284f093d9d513cba0d9ef6",
     "packages": [
+        {
+            "name": "barryvdh/laravel-cors",
+            "version": "v0.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-cors.git",
+                "reference": "bc7f40a71221b46d24971da7f0230ed4a75a18c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/laravel-cors/zipball/bc7f40a71221b46d24971da7f0230ed4a75a18c6",
+                "reference": "bc7f40a71221b46d24971da7f0230ed4a75a18c6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.1.x|5.2.x|5.3.x",
+                "php": ">=5.5.9",
+                "symfony/http-foundation": "~2.7|~3.0",
+                "symfony/http-kernel": "~2.7|~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8|^5.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Barryvdh\\Cors\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "Adds CORS (Cross-Origin Resource Sharing) headers support in your Laravel application",
+            "keywords": [
+                "api",
+                "cors",
+                "crossdomain",
+                "laravel"
+            ],
+            "time": "2016-08-11 08:46:01"
+        },
         {
             "name": "classpreloader/classpreloader",
             "version": "3.0.0",
