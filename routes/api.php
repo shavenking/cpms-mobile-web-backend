@@ -9,6 +9,7 @@ Route::group(['middleware' => 'auth.jwt'], function () {
 
     // Project
     Route::get('/projects', 'ProjectController@list');
+    Route::get('/projects/{project}', 'ProjectController@show');
     Route::post('/projects', 'ProjectController@create');
 
     // 施工日報

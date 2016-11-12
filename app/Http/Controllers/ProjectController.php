@@ -14,6 +14,11 @@ class ProjectController extends Controller
         return response()->json(compact('projects'));
     }
 
+    public function show(Project $project)
+    {
+        return response()->json(compact('project'));
+    }
+
     public function create(Request $request)
     {
         $user = $request->user();
