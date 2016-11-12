@@ -9,11 +9,6 @@ use App\Entity\User;
 
 class AuthController extends Controller
 {
-    public function profile(Request $request)
-    {
-        return $request->user();
-    }
-
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
