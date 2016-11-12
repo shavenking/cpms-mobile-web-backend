@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Entity\Project;
+use App\Model\Project;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
-    public function list(Project $projectEntity)
+    public function list(Project $projectModel)
     {
-        $projects = $projectEntity->all();
+        $projects = $projectModel->all();
 
         return response()->json(compact('projects'));
     }
