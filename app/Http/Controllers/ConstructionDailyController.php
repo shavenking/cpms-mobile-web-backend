@@ -10,9 +10,9 @@ use Illuminate\Http\Request;
 
 class ConstructionDailyController extends Controller
 {
-    public function list(ConstructionDaily $constructionDailyModel)
+    public function list(Project $project)
     {
-        $constructionDailies = $constructionDailyModel->all();
+        $constructionDailies = $project->constructionDailies;
 
         return response()->json(compact('constructionDailies'));
     }
