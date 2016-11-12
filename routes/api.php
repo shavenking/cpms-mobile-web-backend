@@ -18,4 +18,8 @@ Route::group(['middleware' => 'auth.jwt'], function () {
         Route::get('/construction-dailies/{constructionDaily}/summary', 'ConstructionDailyController@summary');
         Route::post('/construction-dailies', 'ConstructionDailyController@create');
     });
+
+    // 工項
+    Route::get('/works', 'WorkController@list');
+    Route::post('/works', 'WorkController@create');
 });
