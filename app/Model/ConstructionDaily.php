@@ -15,4 +15,9 @@ class ConstructionDaily extends Model
         'subcontractor_note', // 七、通知協力廠商辦理事項：
         'important_note', // 八、重要事項記錄
     ];
+
+    public function works()
+    {
+        return $this->belongsToMany(Work::class)->withPivot('amount')->withTimestamps();
+    }
 }
