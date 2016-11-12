@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    //
     protected $fillable = [
         'name', // 工程名稱
         'contractor', // 承攬廠商
