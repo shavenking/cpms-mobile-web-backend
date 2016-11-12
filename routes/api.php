@@ -15,6 +15,7 @@ Route::group(['middleware' => 'auth.jwt'], function () {
     // 施工日報
     Route::group(['prefix' => '/projects/{project}'], function () {
         Route::get('/construction-dailies', 'ConstructionDailyController@list');
+        Route::get('/construction-dailies/{constructionDaily}/summary', 'ConstructionDailyController@summary');
         Route::post('/construction-dailies', 'ConstructionDailyController@create');
     });
 });

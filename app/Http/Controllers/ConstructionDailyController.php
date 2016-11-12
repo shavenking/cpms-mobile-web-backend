@@ -17,6 +17,11 @@ class ConstructionDailyController extends Controller
         return response()->json(compact('constructionDailies'));
     }
 
+    public function summary(Project $project, ConstructionDaily $constructionDaily)
+    {
+        return response()->json(compact('project', 'constructionDaily'));
+    }
+
     public function create(Request $request, Project $project)
     {
         $attributes = $request->only(
