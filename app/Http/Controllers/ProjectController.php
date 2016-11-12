@@ -2,10 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Entity\Project;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
+    public function list(Project $projectEntity)
+    {
+        $projects = $projectEntity->all();
+
+        return response()->json(compact('projects'));
+    }
+
     public function create(Request $request)
     {
         $user = $request->user();
