@@ -12,4 +12,9 @@ class Project extends Model
         'total_day', // 核定工期
         'start_date', // 開工日期
     ];
+
+    public function constructionDailies()
+    {
+        return $this->hasMany(ConstructionDaily::class);
+    }
 }
