@@ -18,6 +18,7 @@ class AuthController extends Controller
     public function register(Request $request)
     {
         $credentials = $request->only('email', 'password');
+        $this->create($request->toArray());
         return $this->attempt($credentials);
     }
 
