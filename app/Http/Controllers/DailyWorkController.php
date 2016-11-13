@@ -41,7 +41,7 @@ class DailyWorkController extends Controller
         Work $workModel,
         Request $request
     ) {
-        $work = $workModel->whereName($request->name)->first(['id']);
+        $work = $workModel->find($request->work_id);
         $constructionDaily->works()->attach($work->id, [
             'amount' => $request->amount
         ]);
