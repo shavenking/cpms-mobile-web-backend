@@ -23,6 +23,7 @@ class CreateConstructionDailiesTable extends Migration
             $table->string('validate_note'); // 六、施工取樣試驗紀錄：
             $table->string('subcontractor_note'); // 七、通知協力廠商辦理事項：
             $table->string('important_note'); // 八、重要事項記錄
+            $table->date('work_date'); // 施工日期
             $table->timestamps();
         });
     }

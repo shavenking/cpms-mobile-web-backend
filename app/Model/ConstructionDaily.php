@@ -14,6 +14,7 @@ class ConstructionDaily extends Model
         'validate_note', // 六、施工取樣試驗紀錄：
         'subcontractor_note', // 七、通知協力廠商辦理事項：
         'important_note', // 八、重要事項記錄
+        'work_date', // 施工日期
     ];
 
     public function works()
