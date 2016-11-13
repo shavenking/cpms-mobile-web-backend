@@ -12,25 +12,17 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
-
-        try {
-            $token = JWTAuth::attempt($credentials);
-
-            if (!$token) {
-                return response()->json($credentials, 401);
-            }
-        } catch (JWTException $e) {
-            return response()->json([], 500);
-        }
-
-        return response()->json(compact('token'));
+        $this->attempt($credentails);
     }
 
     public function register(Request $request)
     {
         $credentials = $request->only('email', 'password');
-        $user = $this->create($request->only('name', 'email', 'password'));
+        $this->attempt($credentails);
+    }
 
+    private function attempt(array $credentials)
+    {
         try {
             $token = JWTAuth::attempt($credentials);
 
