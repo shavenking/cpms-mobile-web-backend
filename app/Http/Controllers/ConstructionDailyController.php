@@ -12,7 +12,7 @@ class ConstructionDailyController extends Controller
 {
     public function list(Project $project)
     {
-        $constructionDailies = $project->constructionDailies;
+        $constructionDailies = $project->constructionDailies()->latest('work_date')->get();
 
         return response()->json(compact('constructionDailies'));
     }
