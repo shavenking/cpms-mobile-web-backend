@@ -17,7 +17,7 @@ class CreateTableConstructionDailyWorkTable extends Migration
             $table->increments('id');
             $table->integer('construction_daily_id')->unsigned();
             $table->integer('work_id')->unsigned();
-            $table->integer('amount')->unsigned();
+            $table->decimal('amount', 10, 2)->unsigned();
             $table->timestamps();
 
             $table->unique(['construction_daily_id', 'work_id']);
