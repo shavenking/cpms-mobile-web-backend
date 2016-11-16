@@ -16,6 +16,10 @@ Route::group(['middleware' => 'auth.jwt'], function () {
     Route::get('/works', 'WorkController@list');
     Route::post('/works', 'WorkController@create');
 
+    // 材料
+    Route::get('/materials', 'MaterialController@list');
+    Route::post('/materials', 'MaterialController@create');
+
     Route::group(['prefix' => '/projects/{project}'], function () {
         Route::group(['prefix' => '/construction-dailies'], function () {
             // 施工日報
@@ -26,6 +30,10 @@ Route::group(['middleware' => 'auth.jwt'], function () {
             // 施工工項
             Route::get('/{constructionDaily}/works', 'DailyWorkController@list');
             Route::post('/{constructionDaily}/works', 'DailyWorkController@create');
+
+            // 工地材料
+            Route::get('/{constructionDaily}/materials', 'DailyMaterialController@list');
+            Route::post('/{constructionDaily}/materials', 'DailyMaterialController@create');
         });
     });
 });
