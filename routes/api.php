@@ -24,6 +24,10 @@ Route::group(['middleware' => 'auth.jwt'], function () {
     Route::get('/labors', 'LaborController@list');
     Route::post('/labors', 'LaborController@create');
 
+    // 機具
+    Route::get('/appliances', 'ApplianceController@list');
+    Route::post('/appliances', 'ApplianceController@create');
+
     Route::group(['prefix' => '/projects/{project}'], function () {
         Route::group(['prefix' => '/construction-dailies'], function () {
             // 施工日報
@@ -42,6 +46,10 @@ Route::group(['middleware' => 'auth.jwt'], function () {
             // 工地人員
             Route::get('/{constructionDaily}/labors', 'DailyLaborController@list');
             Route::post('/{constructionDaily}/labors', 'DailyLaborController@create');
+
+            // 機具管理
+            Route::get('/{constructionDaily}/appliances', 'DailyApplianceController@list');
+            Route::post('/{constructionDaily}/appliances', 'DailyApplianceController@create');
         });
     });
 });
